@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import { Link } from "react-router-dom";
 
 const Login = props => {
 
@@ -56,10 +56,9 @@ const Login = props => {
                 value={user.role}
                 onChange={changeHandler}
                 />
-            <button type="submit">Submit</button>
+            <button type="submit">Submit Login</button>
         </form>
-    <p>Not a Member? Sign up here</p>
-    <button>Signup</button>
+        <p>Not a  Member? Sign up   <Link to="/signup">here</Link>.</p>
     </div>
     )
 }
