@@ -11,9 +11,10 @@ function App() {
 
   const [userData, setUserData] = useState([])
 
+
   useEffect(() => {
     axios
-    .get("https://bw-ill-serve-soup.herokuapp.com/api/users ")
+    .get("https://bw-ill-serve-soup.herokuapp.com/")
     .then( res => {
       setUserData(res.data.results)
       console.log(res.data.result)
@@ -25,8 +26,8 @@ function App() {
     <div className="App">
       <Navigation />
       <Route exact path= "/" component={Home}/>
-    <Route  path= "/login" component={Login}/>
-    <Route  path= "/signup" component={Signup}/>
+      <Route  path= "/login" component={Login}/>
+      <Route  path= "/signup" component={Signup}/>
     </div>
   );
 }
