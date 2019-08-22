@@ -1,66 +1,63 @@
-import React, {useState} from "react";
+import React, { useState } from "react"; // Import useEffect
+import { Form, Field, withFormik } from "formik";
+import '../App.css';
+// Import Axios
+const Signup = ({values, status}) => {
+    //
+    // Example of handling state change using response
+    //
+    // const [users, setUsers] = useState([]);
 
+    // useEffect(() => {
+    //   if (status) {
+    //     setUsers(users => [...users, status]);
+    //     console.log(users);
+    //   }
+    // }, [status]);
 
-const Signup = props => {
+  return (
+    <div className="onboard-form">
+      <Form className="form">
+            <Field component="input" type="text" name="name" placeholder="Name" / >
+            <Field component="input" type="password" name="password" placeholder="Password" / >
+            <Field component="input" type="email" name="email" placeholder="Email" / >
+            <Field component="input" type="text" name="role" placeholder="Role" / >
+            <button className="form-button" type="submit">Submit</button>
+      </Form>
+    </div>
+  );
+};
 
-    const [newUser, setNewUser] = useState("")
+const formikHOC = withFormik({
+    mapPropsToValues({ name, password, email, role }){
+        return {
+            name: name,
+            password: password,
+            email: email,
+            role: role
+        }
+    },
+    handleSubmit(values, { setStatus, resetForm }){
+        
+        console.log(values);
+        resetForm();
 
-    const changeHandler = event => {
-        // console.log(event)
-        setNewUser({...newUser, [event.target.name]: event.target.value})
+        //
+        // Example of using formm data in axios request...
+        //
+        // handleSubmit(values, { setStatus, resetForm }) {
+        //     axios
+        //       .post("https://reqres.in/api/users", values)
+        //       .then(response => {
+        //         // console.log(response)
+        //         setStatus(response.data);
+        //         resetForm();
+        //       })
+        //       .catch(error => {
+        //         console.log("Submission error...", error);
+        //       });
+        //   }
     }
+})
 
-    const submitForm = event => {
-        console.log(event)
-        event.preventDefault();
-        // const newUser = {
-        //     ...user,
-        //     id:Date.now()
-        // }
-        props.addNewUser(newUser);
-        // console.log(newUser)
-    }
-
-    return(
-        <div>
-        <form onSubmit = {submitForm}>
-            <label htmlFor = "name">  New User Name </label>
-            <input
-                type="text"
-                name="name"
-                placeholder="Type Name Here"
-                value={newUser.name}
-                onChange={changeHandler}
-                />
-                 <label htmlFor = "password">  New User Password </label>
-                 <input
-                type="text"
-                name="password"
-                placeholder="Type Password Here"
-                value={newUser.name}
-                onChange={changeHandler}
-                />
-             <label htmlFor = "email">  New User Email </label>    
-                 <input
-                type="email"
-                name="email"
-                placeholder="Type Email Here"
-                value={newUser.email}
-                onChange={changeHandler}
-                />
-             <label htmlFor = "role">  New User Role </label>
-                 <input
-                type="text"
-                name="role"
-                placeholder="Type Role Here"
-                value={newUser.role}
-                onChange={changeHandler}
-                />
-            <button type="submit">Submit</button>
-        </form>
-        <p>Already a Member? Login here</p>
-        <button>Login</button>
-        </div>
-    )
-}
-export default Signup
+export default formikHOC(Signup);
