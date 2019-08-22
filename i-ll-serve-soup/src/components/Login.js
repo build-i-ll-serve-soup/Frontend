@@ -1,46 +1,62 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
+const deployedUrl = "https://bw-ill-serve-soup.herokuapp.com";
+const localUrl = "http://localhost:5000";
 
 const Login = props => {
+  const [user, setUser] = useState("");
 
-    const [user, setUser] = useState("")
+  const changeHandler = event => {
+    // console.log(event)
+    setUser({ ...user, [event.target.name]: event.target.value });
+  };
 
-    const changeHandler = event => {
-        // console.log(event)
-        setUser({...user, [event.target.name]: event.target.value})
-    }
+  console.log(user);
 
-    const submitForm = event => {
-        console.log(event)
-        event.preventDefault();
-        // const newUser = {
-        //     ...user,
-        //     id:Date.now()
-        // }
-        // props.addNewUser(user);
-        // console.log(newUser)
-    }
+  const submitForm = event => {
+    // console.log(event);
+    event.preventDefault();
+    axios
+      .post(`${deployedUrl}/api/users/login`, user)
+      .then(res => {
+        console.log(res.data);
+        localStorage.setItem("JWT", res.data.token);
+      })
+      .catch(err => {
+        console.log("Error:", err);
+      });
 
-    return(
-        <div>
-        <form onSubmit = {submitForm}>
-            <label htmlFor = "name">  User Name </label>
-            <input
-                type="text"
-                name="name"
-                placeholder="Type Name Here"
-                value={user.name}
-                onChange={changeHandler}
-                />
-                 <label htmlFor = "password">  User Password </label>
-                 <input
-                type="text"
-                name="password"
-                placeholder="Type Password Here"
-                value={user.name}
-                onChange={changeHandler}
-                />
-             <label htmlFor = "email">  User Email </label>    
+    // const newUser = {
+    //     ...user,
+    //     id:Date.now()
+    // }
+    // props.addNewUser(user);
+    // console.log(newUser)
+  };
+
+  //username and password are the only fields required to login
+
+  return (
+    <div>
+      <form onSubmit={submitForm}>
+        <label htmlFor="name"> User Email </label>
+        <input
+          type="text"
+          name="email"
+          placeholder="email"
+          value={user.name}
+          onChange={changeHandler}
+        />
+        <label htmlFor="password"> User Password </label>
+        <input
+          type="text"
+          name="password"
+          placeholder="password"
+          value={user.password}
+          onChange={changeHandler}
+        />
+        {/* <label htmlFor = "email">  User Email </label>    
                  <input
                 type="email"
                 name="email"
@@ -55,12 +71,12 @@ const Login = props => {
                 placeholder="Type Role Here"
                 value={user.role}
                 onChange={changeHandler}
-                />
-            <button type="submit">Submit</button>
-        </form>
-    <p>Not a Member? Sign up here</p>
-    <button>Signup</button>
+                /> */}
+        <button type="submit">Submit</button>
+      </form>
+      <p>Not a Member? Sign up here</p>
+      <button>Signup</button>
     </div>
-    )
-}
-export default Login
+  );
+};
+export default Login;

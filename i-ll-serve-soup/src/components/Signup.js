@@ -29,7 +29,7 @@ const Signup = ({ values, status }) => {
   const submitHandler = e => {
     e.preventDefault();
     axios
-      .post(`${deployedUrl}/api/users/register`, user)
+      .post(`${localUrl}/api/users/register`, user)
       .then(res => {
         console.log(res.status);
       })
