@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .onboard-form {
@@ -53,4 +56,16 @@ input, textarea {
   padding: 10px;
   border-radius: 10px;
   background-color: white;
+}
+
+.nav-bar {
+  
+  
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.nav-bar {
+  color: #7cb342;
+  font-size: 2.2rem;
 }
