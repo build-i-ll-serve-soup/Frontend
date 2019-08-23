@@ -7,67 +7,35 @@ const deployedUrl = "https://bw-ill-serve-soup.herokuapp.com";
 const localUrl = "http://localhost:5000";
 
 const Signup = ({ values, status }) => {
-  //
-  // Example of handling state change using response
-  //
+
   const [user, setUser] = useState({});
-
-  // useEffect(() => {
-  //   if (status) {
-  //     setUsers(users => [...users, status]);
-  //     console.log(users);
-  //   }
-  // }, [status]);
-
-  const changeHandler = e => {
-    const { name, value } = e.target;
-    setUser({ ...user, [name]: value });
-  };
-
-  console.log(user);
-
-  const submitHandler = e => {
-    e.preventDefault();
-    axios
-      .post(`${localUrl}/api/users/register`, user)
-      .then(res => {
-        console.log(res.status);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  };
 
   return (
     <div className="onboard-form">
-      <Form className="form" onSubmit={submitHandler}>
+      <Form className="form">
         <Field
           component="input"
           type="text"
           name="name"
           placeholder="Name"
-          onChange={changeHandler}
         />
         <Field
           component="input"
           type="password"
           name="password"
           placeholder="Password"
-          onChange={changeHandler}
         />
         <Field
           component="input"
           type="email"
           name="email"
           placeholder="Email"
-          onChange={changeHandler}
         />
         <Field
           component="input"
           type="text"
           name="role"
           placeholder="Role"
-          onChange={changeHandler}
         />
         <button className="form-button" type="submit">
           Submit
@@ -87,24 +55,16 @@ const formikHOC = withFormik({
     };
   },
   handleSubmit(values, { setStatus, resetForm }) {
-    console.log(values);
     resetForm();
 
-    //
-    // Example of using formm data in axios request...
-    //
-    // handleSubmit(values, { setStatus, resetForm }) {
-    //     axios
-    //       .post("https://reqres.in/api/users", values)
-    //       .then(response => {
-    //         // console.log(response)
-    //         setStatus(response.data);
-    //         resetForm();
-    //       })
-    //       .catch(error => {
-    //         console.log("Submission error...", error);
-    //       });
-    //   }
+    axios
+      .post(`${deployedUrl}/api/users/register`, values)
+      .then(res => {
+        console.log(res.status);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 });
 
