@@ -13,6 +13,9 @@ const Navigation = () => {
         <div>
           <Link to= "/signup">Signup</Link>
         </div>
+        <div>
+          <Link to= "/inventory">Inventory</Link>
+        </div>
     </div>
   );
 };

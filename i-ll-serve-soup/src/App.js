@@ -6,6 +6,7 @@ import Navigation from "./components/Navigation";
 import Home from "./components/Home"
 import Login from "./components/Login";
 import Signup from "./components/Signup"
+import Inventory from "./components/Content/Inventory";
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
       <Route exact path= "/" component={Home}/>
       <Route  path= "/login" component={Login}/>
       <Route  path= "/signup" component={Signup}/>
+      <Route path="/inventory" component={Inventory}/>
     </div>
   );
 }
