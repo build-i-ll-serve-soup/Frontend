@@ -33,14 +33,14 @@ export default class Content extends Component {
     if(this.state.selected==="all"){
       return this.state.itemCards
     } else {
-      return this.state.itemCards.filter(itemCard => itemCard.tab===this.state.selected)
+      return this.state.itemCards.filter(itemCard => itemCard.category===this.state.selected)
     }
   };
 
   render() {
     return (
       <div className="content-container">
-        
+        <h2>Inventory:</h2>
         <CategoryTabs categoryTabs={this.state.categoryTabs} 
             selectedTab={this.state.selected} 
             selectTabHandler={this.changeSelected}

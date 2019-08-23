@@ -6,10 +6,7 @@ const CategoryTabs = props => {
   return (
     <div className="tabs">
       <div className="categories">
-        <span className="title">Categories:</span>
-        {/* map over the tabs provided on your props, create a new Tab component for each one.
-            give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
-      
+        
       {props.categoryTabs.map((categoryTab,index) =>(
         
         <CategoryTab 

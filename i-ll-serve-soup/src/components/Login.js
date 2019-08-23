@@ -39,7 +39,8 @@ const Login = props => {
   //username and password are the only fields required to login
 
   return (
-    <div>
+    <div className="onboard-form">
+      <h2>Login Form</h2>
       <form onSubmit={submitForm}>
         <label htmlFor="name"> User Email </label>
         <input

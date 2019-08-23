@@ -1,23 +1,19 @@
-import React from 'react';
-import {Link} from "react-router-dom";
+import React from 'react'
+import { Tab, Menu, Icon } from 'semantic-ui-react'
+import { NavLink } from "react-router-dom";
 
-const Navigation = () => {
-  return (
-    <div>
-        <div>
-         <Link to = "/">Home</Link>
-        </div>
-        <div>
-         <Link to = "/login">Login</Link>
-        </div>
-        <div>
-          <Link to= "/signup">Signup</Link>
-        </div>
-        <div>
-          <Link to= "/content">Content</Link>
-        </div>
-    </div>
-  );
-};
+const Navigation = props => (
+  <NavLink exact {...props} activeClassName="active"/>
+)
+ const createLabel = (iconName, labelText) => <span><Icon name={iconName} />{labelText}</span>
 
-export default Navigation;
+ const panes = [
+  { menuItem: <Menu.Item key='home' as={Navigation} to={`/`} content={createLabel("home", "Home Page")} /> },
+  { menuItem: <Menu.Item key='login' as={Navigation} to={`/login`} content={createLabel("sign-in", "Login")} /> },
+  { menuItem: <Menu.Item key='signup' as={Navigation} to={`/signup`} content={createLabel("write", "Signup")} /> },
+  { menuItem: <Menu.Item key='content' as={Navigation} to={`/content`} content={createLabel("archive", "Content")} /> }
+ ]
+
+ const TabNav = () => <Tab menu={{pointing: true, secondary: true}}panes={panes}/>
+
+export default TabNav

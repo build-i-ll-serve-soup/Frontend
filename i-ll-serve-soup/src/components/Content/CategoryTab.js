@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const CategoryTab = props => {
 
       let tabCategory = "";
-      console.log(props)
+    //   console.log(props)
       if(props.categoryTab === props.selectedTab) {
         tabCategory = "tab active-tab"
       } else {
@@ -20,13 +20,11 @@ const CategoryTab = props => {
         props.selectTabHandler(props.categoryTab)
       }}
     >
-      {props.categoryTab.toUpperCase()}
+      {props.categoryTab}
     </div>
   );
 };
 
-
-// Make sure you include PropTypes on your props.
 
 CategoryTab.propTypes = {
   categoryTab: PropTypes.string,
