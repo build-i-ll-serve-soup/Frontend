@@ -108,7 +108,9 @@ const Signup = ({ values, status }) => {
 
   return (
     <div className="onboard-form">
+       
       <Form className="form" onSubmit={submitHandler}>
+      <label htmlFor="name"> New User Email </label>
         <Field
           component="input"
           type="text"
@@ -116,6 +118,7 @@ const Signup = ({ values, status }) => {
           placeholder="Name"
           onChange={changeHandler}
         />
+         <label htmlFor="password"> New User Password </label>
         <Field
           component="input"
           type="password"
@@ -123,6 +126,7 @@ const Signup = ({ values, status }) => {
           placeholder="Password"
           onChange={changeHandler}
         />
+         <label htmlFor = "email">  New User Email </label>  
         <Field
           component="input"
           type="email"
@@ -130,6 +134,7 @@ const Signup = ({ values, status }) => {
           placeholder="Email"
           onChange={changeHandler}
         />
+         <label htmlFor = "role">  New User Role </label>
         <Field
           component="input"
           type="text"
