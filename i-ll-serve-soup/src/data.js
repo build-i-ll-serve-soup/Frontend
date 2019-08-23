@@ -1,4 +1,6 @@
-const inventoryData = [
+export const tabData = ['all', 'produce', 'dry goods', 'canned goods', 'spices/herbs', 'dairy', 'other']
+
+export const cardData = [
     {
         itemName: "White Potatoes",
         stock:"10 pounds",
@@ -65,4 +67,3 @@ const inventoryData = [
         category:"spices/herbs",
     },
 ];
-export default inventoryData;
