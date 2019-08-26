@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import axios from "axios";
 
 const deployedUrl = "https://bw-ill-serve-soup.herokuapp.com";
@@ -42,44 +44,28 @@ const Login = props => {
       <div className="form-header">
         <h1>Sign In</h1>
       </div>
-      <form onSubmit={submitForm}>
-        <label htmlFor="name"> User Email </label>
+      <form className="form" onSubmit={submitForm}>
         <input
+          required
           type="text"
           name="email"
           placeholder="email"
           value={user.name}
           onChange={changeHandler}
         />
-        <label htmlFor="password"> User Password </label>
         <input
-          type="text"
+          required
+          type="password"
           name="password"
           placeholder="password"
           value={user.password}
           onChange={changeHandler}
         />
-        {/* <label htmlFor = "email">  User Email </label>    
-                 <input
-                type="email"
-                name="email"
-                placeholder="Type Email Here"
-                value={user.email}
-                onChange={changeHandler}
-                />
-             <label htmlFor = "role">  User Role </label>
-                 <input
-                type="text"
-                name="role"
-                placeholder="Type Role Here"
-                value={user.role}
-                onChange={changeHandler}
-                /> */}
-        <button type="submit">Submit</button>
+
+        <button className="form-button" type="submit">Submit</button>
       </form>
       <div className="form-footer">
-        <p>Not a Member? Sign up here</p>
-        <button>Signup</button>
+        <p>Not a Member? Sign up <Link to='/signup' style={{color: '#7cb342', fontWeight: 'bold'}}>here</Link></p>
       </div>
     </div>
   );
