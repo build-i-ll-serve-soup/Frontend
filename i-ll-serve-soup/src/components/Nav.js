@@ -1,11 +1,12 @@
 import React from 'react';
+import { Route, Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Login from './Login';
-
+import Signup from './Signup';
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -14,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     fontWeight: 'bold',
     color: '#7cb342',
-    marginRight: '-5rem'
+    marginRight: '-12rem'
   },
   getStarted: {
       color: '#7cb342',
@@ -22,7 +23,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function Nav() {
+export default function Nav(props) {
   const classes = useStyles();
 
   return (
@@ -32,12 +33,13 @@ export default function Nav() {
           <Typography variant="h5" className={classes.title}>
             I'll Serve Soup
           </Typography>
-          <Button color="inherit">Sign In</Button>
-          <Button variant="outlined" className={classes.getStarted}>Get Started</Button>
+          <Link to='/login'><Button>Sign In</Button></Link>
+          <Link to='/signup'><Button variant="outlined" className={classes.getStarted}>Get Started</Button></Link>
         </Toolbar>
       </AppBar>
 
-    <Login />
+      <Route default path='/login' component={Login} />
+      <Route path='/signup' component={Signup} />
     </div>
   );
 }

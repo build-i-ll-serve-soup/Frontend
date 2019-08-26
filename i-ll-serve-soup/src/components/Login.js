@@ -6,7 +6,7 @@ const localUrl = "http://localhost:5000";
 
 const Login = props => {
   const [user, setUser] = useState("");
-
+  console.log(props.login);
   const changeHandler = event => {
     // console.log(event)
     setUser({ ...user, [event.target.name]: event.target.value });
@@ -38,7 +38,10 @@ const Login = props => {
   //username and password are the only fields required to login
 
   return (
-    <div>
+    <div className="onboard-form">
+      <div className="form-header">
+        <h1>Sign In</h1>
+      </div>
       <form onSubmit={submitForm}>
         <label htmlFor="name"> User Email </label>
         <input
@@ -74,8 +77,10 @@ const Login = props => {
                 /> */}
         <button type="submit">Submit</button>
       </form>
-      <p>Not a Member? Sign up here</p>
-      <button>Signup</button>
+      <div className="form-footer">
+        <p>Not a Member? Sign up here</p>
+        <button>Signup</button>
+      </div>
     </div>
   );
 };
