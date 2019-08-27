@@ -2,11 +2,13 @@ import React, {useState, useEffect } from 'react';
 import axios from "axios"
 import './App.css';
 import {Route} from "react-router-dom";
-import Navigation from "./components/Navigation";
+import TabNav from "./components/TabNav";
 import Home from "./components/Home"
 import Login from "./components/Login";
 import Signup from "./components/Signup"
 import Content from './components/Content/Content';
+import AddItemForm from "./AddItemForm"
+
 
 
 function App() {
@@ -26,13 +28,13 @@ function App() {
   })
   return (
     <div className="App">
-      <Navigation />
-
-      <Route exact path= "/" component={Home}/>
-      <Route  path= "/login" component={Login}/>
-      <Route  path= "/signup" component={Signup}/>
-      <Route  path= "/content" component={Content}/>
-
+  
+      <TabNav />
+        <Route exact path= "/" component={Home}/>
+        <Route  path= "/login" component={Login}/>
+        <Route  path= "/signup" component={Signup}/>
+        <Route  path= "/content" component={Content}/>
+        <Route  path= "/add-item" component={AddItemForm}/>
     </div>
   );
 }

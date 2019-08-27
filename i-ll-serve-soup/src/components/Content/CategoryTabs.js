@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 
 const CategoryTabs = props => {
   return (
-    <div className="tabs">
+ 
       <div className="categories">
         
       {props.categoryTabs.map((categoryTab,index) =>(
@@ -17,7 +17,7 @@ const CategoryTabs = props => {
         />
       ))}
       </div>
-    </div>
+   
   );
 };
 // Make sure to use PropTypes to validate your types!

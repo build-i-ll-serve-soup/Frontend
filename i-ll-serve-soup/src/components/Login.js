@@ -42,38 +42,21 @@ const Login = props => {
     <div className="onboard-form">
       <h2>Login Form</h2>
       <form onSubmit={submitForm}>
-        <label htmlFor="name"> User Email </label>
         <input
           type="text"
           name="email"
-          placeholder="email"
+          placeholder="Email"
           value={user.name}
           onChange={changeHandler}
         />
-        <label htmlFor="password"> User Password </label>
         <input
           type="text"
           name="password"
-          placeholder="password"
+          placeholder="Password"
           value={user.password}
           onChange={changeHandler}
         />
-        {/* <label htmlFor = "email">  User Email </label>    
-                 <input
-                type="email"
-                name="email"
-                placeholder="Type Email Here"
-                value={user.email}
-                onChange={changeHandler}
-                />
-             <label htmlFor = "role">  User Role </label>
-                 <input
-                type="text"
-                name="role"
-                placeholder="Type Role Here"
-                value={user.role}
-                onChange={changeHandler}
-                /> */}
+       
         <button type="submit">Submit</button>
       </form>
       <p>Not a  Member? Sign up   <Link to="/signup">here</Link>.</p>

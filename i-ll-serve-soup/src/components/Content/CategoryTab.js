@@ -20,7 +20,7 @@ const CategoryTab = props => {
         props.selectTabHandler(props.categoryTab)
       }}
     >
-      {props.categoryTab}
+      {props.categoryTab.toUpperCase()}
     </div>
   );
 };

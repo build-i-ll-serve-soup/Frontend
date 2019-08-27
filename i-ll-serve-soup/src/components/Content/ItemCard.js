@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from "prop-types"
 
 const ItemCard = props => {
+  console.log(props)
   return (
     <div className="itemCard">
       <div className="itemName"><strong>{props.itemCard.itemName}</strong></div>
@@ -10,11 +10,5 @@ const ItemCard = props => {
     </div>
   );
 };
-
-ItemCard.propTypes = {
-itemName: PropTypes.string,
-stock: PropTypes.string,
-category: PropTypes.string,
-}
 
 export default ItemCard;
