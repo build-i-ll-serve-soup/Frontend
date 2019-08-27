@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Route } from 'react-router-dom';
 import './App.css';
-import Login from "./components/Login";
-import Signup from "./components/Signup"
-
+import Nav from './components/Nav';
+import Login from './components/Auth/Login';
+import Signup from './components/Auth/Signup';
 function App() {
+  const [ isLoggedIn, setLoggedin ] = useState(true);
+
   return (
     <div className="App">
-
-      <h1>I'll Serve Soup</h1>
-      <h2>Login Form</h2>
-      <Login />
-      <h2>SignUp Form</h2>
-      <Signup />
+      <Nav login={isLoggedIn} setLoggedin={setLoggedin}/>
+      <Route path="/login" component={Login} />
+      <Route path="/signup" component={Signup} />
     </div>
   );
 }
