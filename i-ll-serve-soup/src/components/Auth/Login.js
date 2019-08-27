@@ -1,20 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import '../../App.css';
 import axios from "axios";
 
 const deployedUrl = "https://bw-ill-serve-soup.herokuapp.com";
-const localUrl = "http://localhost:5000";
 
 const Login = props => {
   const [user, setUser] = useState("");
-  console.log(props.login);
+
   const changeHandler = event => {
     // console.log(event)
     setUser({ ...user, [event.target.name]: event.target.value });
   };
-
-  console.log(user);
 
   const submitForm = event => {
     // console.log(event);
@@ -28,16 +25,7 @@ const Login = props => {
       .catch(err => {
         console.log("Error:", err);
       });
-
-    // const newUser = {
-    //     ...user,
-    //     id:Date.now()
-    // }
-    // props.addNewUser(user);
-    // console.log(newUser)
   };
-
-  //username and password are the only fields required to login
 
   return (
     <div className="onboard-form">

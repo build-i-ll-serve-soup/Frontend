@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { Route } from 'react-router-dom';
 import './App.css';
 import Nav from './components/Nav';
-import { Route } from 'react-router-dom';
-import Login from './components/Login';
-import Signup from './components/Signup';
-
+import Login from './components/Auth/Login';
+import Signup from './components/Auth/Signup';
 function App() {
-  const [ login, setLogin ] = useState(false);
+  const [ isLoggedIn, setLoggedin ] = useState(true);
 
   return (
     <div className="App">
-      { login ? <h1>logged in</h1> : <Nav login={login} setLogin={setLogin}/> }
+      <Nav login={isLoggedIn} setLoggedin={setLoggedin}/>
+      <Route path="/login" component={Login} />
+      <Route path="/signup" component={Signup} />
     </div>
   );
 }
