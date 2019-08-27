@@ -7,10 +7,10 @@ const AddItemForm = props => {
     const changeHandler = event => {
          setItem({...item, [event.target.name]: event.target.value});
      };
+
 const submitForm = event => {
-    event.preventDefault();
-   
-props.addNewItem(item);
+    event.preventDefault(); 
+    props.addNewItem(item);
 }
     return (
         <div className="onboard-form">
@@ -27,7 +27,7 @@ props.addNewItem(item);
        <input
           type="text"
           name="stock"
-          placeholder="Amount in Stock"
+          placeholder="Amount"
           value={item.stock}
           onChange={changeHandler}
         />
