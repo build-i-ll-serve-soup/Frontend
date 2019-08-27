@@ -2,7 +2,8 @@ import React, {useState} from "react";
 
 const AddItemForm = props => {
 
-    const [item, setItem] = useState("");
+    const [item, setItem] = useState("cardData");
+    console.log(item)
      
     const changeHandler = event => {
          setItem({...item, [event.target.name]: event.target.value});

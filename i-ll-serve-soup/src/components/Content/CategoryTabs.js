@@ -1,12 +1,12 @@
 import React from 'react';
 import CategoryTab from './CategoryTab';
-import PropTypes from "prop-types"
+
+
 
 const CategoryTabs = props => {
   return (
  
       <div className="categories">
-        
       {props.categoryTabs.map((categoryTab,index) =>(
         
         <CategoryTab 
@@ -20,11 +20,8 @@ const CategoryTabs = props => {
    
   );
 };
-// Make sure to use PropTypes to validate your types!
-CategoryTabs.propTypes = {
-    selectedTab: PropTypes.string,
-    selectTabHandler: PropTypes.func,
-    tabs: PropTypes.array,
-  }
+
   export default CategoryTabs;
+
+  
   

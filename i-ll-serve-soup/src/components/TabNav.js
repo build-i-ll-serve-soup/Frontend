@@ -16,6 +16,6 @@ const Nav = props => (
  
 ]
 
- const TabNav = () => <Tab menu={{pointing: true, secondary: true}}panes={panes}/>
+ const TabNav = () => <Tab menu={{pointing: true}}panes={panes}/>
 
 export default TabNav

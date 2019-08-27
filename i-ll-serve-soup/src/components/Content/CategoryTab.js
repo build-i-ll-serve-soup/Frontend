@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from "prop-types";
 
 const CategoryTab = props => {
 
@@ -26,10 +25,6 @@ const CategoryTab = props => {
 };
 
 
-CategoryTab.propTypes = {
-  categoryTab: PropTypes.string,
-  selectedTab: PropTypes.string,
-  selectTabHandler: PropTypes.func,
-}
+
 
 export default CategoryTab;

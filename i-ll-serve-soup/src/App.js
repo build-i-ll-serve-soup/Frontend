@@ -21,8 +21,6 @@ function App() {
     .get("https://bw-ill-serve-soup.herokuapp.com/")
     .then( res => {
       setUserData(res.data.results)
-      console.log(res.data.result)
-      console.log(userData)
     })
     .catch( err => console.log(err))
   })
