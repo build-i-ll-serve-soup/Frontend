@@ -5,12 +5,12 @@ import Nav from './components/Nav';
 import Login from './components/Auth/Login';
 import Signup from './components/Auth/Signup';
 function App() {
-  const [ isLoggedIn, setLoggedin ] = useState(true);
+  const [ isLoggedIn, setLoggedin ] = useState(false);
 
   return (
     <div className="App">
       <Nav login={isLoggedIn} setLoggedin={setLoggedin}/>
-      <Route path="/login" component={Login} />
+      <Route default path="/login" component={Login} />
       <Route path="/signup" component={Signup} />
     </div>
   );
