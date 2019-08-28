@@ -1,8 +1,6 @@
 import React from 'react';
 import ItemCard from './ItemCard';
 
-
-
 const ItemCards = props => {
   return (
     <div className="itemCards-container" >

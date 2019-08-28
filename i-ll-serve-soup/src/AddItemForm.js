@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import {Form, Field} from "formik";
+
 
 const AddItemForm = props => {
 
@@ -15,9 +17,11 @@ const submitForm = event => {
     props.addNewItem(item);
 }
     return (
-        <div className="addItem">
-            <h2>Add Item Form</h2>
-         <form onSubmit={submitForm}>       
+        <div className="onboard-form">
+            
+        <Form className="form" onSubmit={submitForm}> 
+        <h2>Add Item Form</h2>  
+       
         <input className="formSection"
           type="text"
           name="itemName"
@@ -32,15 +36,24 @@ const submitForm = event => {
           value={item.stock}
           onChange={changeHandler}
         />
-        <input className="formSection"
+        {/* <input className="formSection"
           type="text"
           name="category"
           placeholder="Item Category"
           value={item.category}
           onChange={changeHandler}
-        />
-        <button type="submit">Add Item</button>
-      </form>
+        /> */}
+        <select value={changeHandler}>
+        <option value="all">Select Item Category</option>
+        <option value="produce">Produce</option>
+        <option value="dry-goods">Dry Goods</option>
+        <option value="canned-goods">Canned Goods</option>
+        <option value="spices/herbs">Spices and Herbs</option>
+        <option value="dairy">Dairy</option>
+        <option value="other">Other</option>
+        </select>
+        <button type="submit" className="form-button">Add Item</button>
+      </Form>
       </div>  
     )
   };
