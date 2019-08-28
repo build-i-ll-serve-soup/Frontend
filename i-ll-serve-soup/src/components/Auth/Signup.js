@@ -1,13 +1,11 @@
-import React, { useState } from "react"; // Import useEffect
+import React from "react"; // Import useEffect
 import { Form, Field, withFormik } from "formik";
 import '../../App.css';
 import axios from "axios";
 
 const deployedUrl = "https://bw-ill-serve-soup.herokuapp.com";
-const localUrl = "http://localhost:5000";
 
 const Signup = ({ values, status }) => {
-  const [user, setUser] = useState({});
 
   return (
     <div className="onboard-form">

@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { Route } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Route, Redirect } from 'react-router-dom';
 import './App.css';
 import Nav from './components/Nav';
 import Login from './components/Auth/Login';
 import Signup from './components/Auth/Signup';
+
 function App() {
-  const [ isLoggedIn, setLoggedin ] = useState(true);
+  const [ isLoggedIn, setLoggedin ] = useState(false);
 
   return (
     <div className="App">
       <Nav login={isLoggedIn} setLoggedin={setLoggedin}/>
-      <Route path="/login" component={Login} />
+      <Route path="/login" render={(props) => (<Login {...props} loggedIn={isLoggedIn} setLoggedin={setLoggedin}/>)} />
       <Route path="/signup" component={Signup} />
+      { isLoggedIn ? <Redirect exact from="/login" to="/inventory"></Redirect> : <Redirect exact from="/" to="/login" />}
     </div>
   );
 }
