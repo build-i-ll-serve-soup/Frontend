@@ -19,6 +19,9 @@ const useStyles = makeStyles(theme => ({
   getStarted: {
     color: "#7cb342",
     borderColor: "#7cb342"
+  },
+  signOut: {
+    borderColor: 'black'
   }
 }));
 
@@ -39,6 +42,9 @@ export default function Nav(props) {
             <Link to="/orders">
               <Button>Orders</Button>
             </Link>
+            <Button variant="outlined" className={classes.signOut} onClick={() => {props.setLoggedin(false)}}>
+              Sign Out
+            </Button>
           </Toolbar>
         </AppBar>
       ) : (

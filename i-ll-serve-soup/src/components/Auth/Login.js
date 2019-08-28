@@ -21,6 +21,7 @@ const Login = props => {
       .then(res => {
         console.log(res.data);
         localStorage.setItem("JWT", res.data.token);
+        props.setLoggedin(true);
       })
       .catch(err => {
         console.log("Error:", err);
