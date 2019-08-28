@@ -1,4 +1,4 @@
-export const tabData = ['all', 'produce', 'dry goods', 'canned goods', 'spices/herbs', 'dairy', 'other']
+export const tabData = ['all', 'produce', 'dry goods', 'canned goods', 'spices & herbs', 'dairy', 'other']
 
 export const cardData = [
     {
@@ -29,6 +29,6 @@ export const cardData = [
     {
         itemName: "Sea Salt",
         stock:"24 ounces",
-        category:"spices/herbs",
+        category:"spices & herbs",
     },
 ];

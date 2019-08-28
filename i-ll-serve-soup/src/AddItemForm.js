@@ -18,21 +18,21 @@ const submitForm = event => {
         <div className="addItem">
             <h2>Add Item Form</h2>
          <form onSubmit={submitForm}>       
-        <input
+        <input className="formSection"
           type="text"
           name="itemName"
           placeholder="Item Name"
           value={item.itemName}
           onChange={changeHandler}
         />
-       <input
+       <input className="formSection"
           type="text"
           name="stock"
           placeholder="Amount in Stock"
           value={item.stock}
           onChange={changeHandler}
         />
-        <input
+        <input className="formSection"
           type="text"
           name="category"
           placeholder="Item Category"

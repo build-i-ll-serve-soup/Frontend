@@ -97,5 +97,38 @@ input, textarea {
 .categories {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   border: 1px solid magenta;
 }
+
+.addItem {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 3px dotted green;
+}
+.itemCard {
+  border: 4px solid orange;
+  margin: 25px 50px;
+}
+.itemCards-container {
+  border: 5px solid maroon;
+}
+.formSection{
+ 
+  flex-direction: column;
+  
+  border: 3px dotted navy;
+}
+/* .itemName {
+  border: 2px dashed purple;
+  color: purple;
+}
+.stock {
+  border: 2px dashed dodgerblue;
+  color:dodgerblue;
+}
+.category {
+  border: 2px dashed red;
+  color: red;
+} */
