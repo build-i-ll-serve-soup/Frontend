@@ -2,22 +2,22 @@ import React, {useState} from "react";
 
 const AddItemForm = props => {
 
-    const [item, setItem] = useState("cardData");
-    console.log(item)
+    const [item, setItem] = useState("");
+  
      
     const changeHandler = event => {
          setItem({...item, [event.target.name]: event.target.value});
      };
 
 const submitForm = event => {
+  // console.log(event)
     event.preventDefault(); 
     props.addNewItem(item);
 }
     return (
         <div className="onboard-form">
             <h2>Add Item Form</h2>
-         <form onSubmit={submitForm}>
-        
+         <form onSubmit={submitForm}>       
         <input
           type="text"
           name="itemName"
@@ -28,7 +28,7 @@ const submitForm = event => {
        <input
           type="text"
           name="stock"
-          placeholder="Amount"
+          placeholder="Amount in Stock"
           value={item.stock}
           onChange={changeHandler}
         />

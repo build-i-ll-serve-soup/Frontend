@@ -1,5 +1,6 @@
-import React, {useState, useEffect } from 'react';
-import axios from "axios"
+// import React, {useState, useEffect } from 'react';
+// import axios from "axios"
+import React from "react";
 import './App.css';
 import {Route} from "react-router-dom";
 import TabNav from "./components/TabNav";
@@ -13,17 +14,16 @@ import AddItemForm from "./AddItemForm"
 
 function App() {
 
-  const [userData, setUserData] = useState([])
+  // const [userData, setUserData] = useState([])
 
-
-  useEffect(() => {
-    axios
-    .get("https://bw-ill-serve-soup.herokuapp.com/")
-    .then( res => {
-      setUserData(res.data.results)
-    })
-    .catch( err => console.log(err))
-  })
+  // useEffect(() => {
+  //   axios
+  //   .get("https://bw-ill-serve-soup.herokuapp.com/")
+  //   .then( res => {
+  //     setUserData(res.data.results)
+  //   })
+  //   .catch( err => console.log(err))
+  // })
   return (
     <div className="App">
   

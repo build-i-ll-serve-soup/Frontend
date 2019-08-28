@@ -5,10 +5,9 @@ import CategoryTab from './CategoryTab';
 
 const CategoryTabs = props => {
   return (
- 
       <div className="categories">
+
       {props.categoryTabs.map((categoryTab,index) =>(
-        
         <CategoryTab 
         categoryTab={categoryTab}
         index={index}
