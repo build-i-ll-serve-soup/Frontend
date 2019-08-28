@@ -94,3 +94,8 @@ input, textarea {
   color: #7cb342;
   font-size: 2.2rem;
 }
+.categories {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid magenta;
+}

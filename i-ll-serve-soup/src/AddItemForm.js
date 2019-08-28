@@ -15,7 +15,7 @@ const submitForm = event => {
     props.addNewItem(item);
 }
     return (
-        <div className="onboard-form">
+        <div className="addItem">
             <h2>Add Item Form</h2>
          <form onSubmit={submitForm}>       
         <input
