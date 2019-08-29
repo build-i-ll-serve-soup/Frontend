@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { axiosWithAuth } from '../Auth/axiosAuth';
 import CategoryTabs from './CategoryTabs';
 import ItemCards from './ItemCards';
 
@@ -12,6 +12,7 @@ export default class Content extends Component {
       selected: "all",
       categoryTabs: [],
       itemCards: [],
+      res: ''
     };
   }
 
@@ -19,7 +20,16 @@ export default class Content extends Component {
     this.setState( {
         categoryTabs:tabData,
         itemCards: cardData,
-    })
+    });
+    console.log("mount")
+
+    axiosWithAuth().get('https://bw-ill-serve-soup.herokuapp.com/api/items')
+      .then( res => {
+        this.setState({ res });
+        console.log(this.state.res)
+      })
+      .catch( err => console.log("catch" + err))
+      
   }
 
   changeSelected = categoryTab => {
