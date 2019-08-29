@@ -94,3 +94,38 @@ input, textarea {
   color: #7cb342;
   font-size: 2.2rem;
 }
+.categories {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border-radius: 15px;
+  justify-content: space-between;
+  background: rgb(46, 54, 41);
+  color:white;
+}
+
+.addItem {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 3px dotted green;
+}
+.itemCard {
+  box-shadow: 0px 0px 5px 5px #ccc;
+  background-color: white;
+  border-radius: 5px;
+  /* border: 4px solid orange; */
+  margin: 25px 150px;
+}
+/* .itemCards-container {
+  border: 5px solid maroon;
+} */
+
+/* .itemName {
+  border: 2px dashed purple;
+  color: purple;
+} */
+.stock, .category {
+
+  color:#7cb342;
+}
