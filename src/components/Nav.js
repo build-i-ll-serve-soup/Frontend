@@ -39,7 +39,7 @@ export default function Nav(props) {
             <Link default to="/inventory">
               <Button>Inventory</Button>
             </Link>
-            <Link default to="/kitchen-form">
+            <Link default to="/addKitchen">
               <Button>Add Kitchen</Button>
             </Link>
             <Link default to="/addItem">
