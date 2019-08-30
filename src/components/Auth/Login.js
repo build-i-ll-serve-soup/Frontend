@@ -9,12 +9,10 @@ const Login = props => {
   const [user, setUser] = useState("");
 
   const changeHandler = event => {
-    // console.log(event)
     setUser({ ...user, [event.target.name]: event.target.value });
   };
 
   const submitForm = event => {
-    // console.log(event);
     event.preventDefault();
     axios
       .post(`${deployedUrl}/api/users/login`, user)

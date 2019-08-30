@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import './App.css';
 import Nav from './components/Nav';
@@ -7,7 +7,7 @@ import Signup from './components/Auth/Signup';
 import Content from './components/Content/Content';
 import AddItemForm from "./AddItemForm";
 function App() {
-  const [ isLoggedIn, setLoggedin ] = useState(true);
+  const [ isLoggedIn, setLoggedin ] = useState(false);
 
   return (
     <div className="App">
