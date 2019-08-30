@@ -60,7 +60,7 @@ export default class Content extends Component {
         <ItemCards itemCards={this.filterCards()}
         />
         {/* <ItemsCardsAxios /> */}
-        <h1>Kitchens :</h1>
+        <h1>Participating Soup Kitchens :</h1>
         <KitchenList />
       </div>
     );

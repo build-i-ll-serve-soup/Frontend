@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Form, Field} from "formik";
+import {Form} from "formik";
 
 
 const AddItemForm = props => {
@@ -9,7 +9,7 @@ const AddItemForm = props => {
      
     const changeHandler = event => {
          setItem({...item, [event.target.name]: event.target.value});
-     };
+     }
 
 const submitForm = event => {
   // console.log(event)
