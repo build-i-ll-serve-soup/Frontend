@@ -9,7 +9,7 @@ import AddItemForm from "./AddItemForm";
 import Kitchens from "./components/Content/Kitchens";
 
 function App() {
-  const [ isLoggedIn, setLoggedin ] = useState(true);
+  const [ isLoggedIn, setLoggedin ] = useState(false);
 
   return (
     <div className="App">
