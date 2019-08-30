@@ -6,8 +6,10 @@ import Login from './components/Auth/Login';
 import Signup from './components/Auth/Signup';
 import Content from './components/Content/Content';
 import AddItemForm from "./AddItemForm";
+import Kitchens from "./components/Content/Kitchens";
+
 function App() {
-  const [ isLoggedIn, setLoggedin ] = useState(false);
+  const [ isLoggedIn, setLoggedin ] = useState(true);
 
   return (
     <div className="App">
@@ -16,6 +18,7 @@ function App() {
       <Route path="/signup" component={Signup} />
       <Route path="/inventory" component={Content} />
       <Route path="/addItem" component={AddItemForm} />
+      <Route path="/kitchens" component={Kitchens} />
       { isLoggedIn ? <Redirect exact from="/login" to="/inventory"></Redirect> : <Redirect exact from="/" to="/login" />}
     </div>
   );

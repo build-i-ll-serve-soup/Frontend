@@ -147,3 +147,27 @@ input, textarea {
 
   color:#7cb342;
 }
+
+.kitchens {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.kitchens h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.kitchen-card {
+  width: 30%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 5px #ccc;
+  padding: 10px 20px;
+  margin-top: 30px;
+}
+
+.kitchen-card a {
+  color: #7cb342;
+}

@@ -23,7 +23,7 @@ export default class Content extends Component {
     });
     console.log("mount")
 
-    axiosWithAuth().get('https://bw-ill-serve-soup.herokuapp.com/api/items')
+    axiosWithAuth().get('https://bw-ill-serve-soup.herokuapp.com/api/categories') 
       .then( res => {
         this.setState({ res });
         console.log(this.state.res)

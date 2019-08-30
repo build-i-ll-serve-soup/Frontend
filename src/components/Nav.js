@@ -39,8 +39,8 @@ export default function Nav(props) {
             <Link default to="/inventory">
               <Button>Inventory</Button>
             </Link>
-            <Link default to="/addItem">
-              <Button>Add Item</Button>
+            <Link default to="/kitchens">
+              <Button>View Kitchens</Button>
             </Link>
             <Button variant="outlined" className={classes.signOut} onClick={() => {props.setLoggedin(false)}}>
               Sign Out
