@@ -28,31 +28,34 @@ const Login = props => {
 
   return (
     <div className="onboard-form">
-      <div className="form-header">
-        <h1>Sign In</h1>
-      </div>
-      <form className="form" onSubmit={submitForm}>
-        <input
-          required
-          type="text"
-          name="email"
-          placeholder="email"
-          value={user.name}
-          onChange={changeHandler}
-        />
-        <input
-          required
-          type="password"
-          name="password"
-          placeholder="password"
-          value={user.password}
-          onChange={changeHandler}
-        />
+      <div className="image"><img src="images/bowl-marked-soup.jpg" alt="Bowl Marked Soup" /></div>
+      <div className="signup-form">
+        <div className="form-header">
+          <h1>Sign In</h1>
+        </div>
+        <form className="form" onSubmit={submitForm}>
+          <input
+            required
+            type="text"
+            name="email"
+            placeholder="email"
+            value={user.name}
+            onChange={changeHandler}
+          />
+          <input
+            required
+            type="password"
+            name="password"
+            placeholder="password"
+            value={user.password}
+            onChange={changeHandler}
+          />
 
-        <button className="form-button" type="submit">Submit</button>
-      </form>
-      <div className="form-footer">
-        <p>Not a Member? Sign up <Link to='/signup' style={{color: '#7cb342', fontWeight: 'bold'}}>here</Link></p>
+          <button className="form-button" type="submit">Submit</button>
+        </form>
+        <div className="form-footer">
+          <p>Not a Member? Sign up <Link to='/signup' style={{color: '#7cb342', fontWeight: 'bold'}}>here</Link></p>
+        </div>
       </div>
     </div>
   );
