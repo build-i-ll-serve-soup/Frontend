@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { axiosWithAuth } from '../Auth/axiosAuth';
 import CategoryTabs from './CategoryTabs';
 import ItemCards from './ItemCards';
+import ItemsCardsAxios from "./ItemsCardsAxios";
 
 import { tabData, cardData } from '../../data';
 
@@ -56,8 +57,8 @@ export default class Content extends Component {
             selectTabHandler={this.changeSelected}
         />
         <ItemCards itemCards={this.filterCards()}
-      
         />
+        <ItemsCardsAxios />
       </div>
     );
   }

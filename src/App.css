@@ -100,8 +100,7 @@ input, textarea {
   padding: 10px;
   border-radius: 15px;
   justify-content: space-between;
-  background: rgb(46, 54, 41);
-  color:white;
+  background: #7cb342;
 }
 
 .addItem {
