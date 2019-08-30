@@ -1,34 +1,59 @@
-export const tabData = ['all', 'produce', 'dry goods', 'canned goods', 'spices & herbs', 'dairy', 'other']
-
+export const tabData = ['all', 'chicken', 'fruits', 'herbal', 'proteins', 'cream', 'instant', 'noodle', 'fish', 'bread', "Bisque"]
 export const cardData = [
     {
-        itemName: "Paper Towels",
-        stock:"50 rolls",
-        category:"other",
+        name: "Paper Towels",
+        amount:"50 rolls",
+        category:"Bisque",
     },
     {
-        itemName: "Butter(unsalted)",
-        stock:"15 pounds",
-        category:"dairy",
+        name: "Butter(unsalted)",
+        amount:"15 pounds",
+        category:"cream",
     },
     {
-        itemName: "White Potatoes",
-        stock:"10 pounds",
-        category:"produce",
+        name: "White Potatoes",
+        amount:"10 pounds",
+        category:"fruit",
     },
     {
-        itemName: "Flour",
-        stock:"18 pounds",
-        category:"dry goods",
+        name: "Flour",
+        amount:"18 pounds",
+        category:"instant",
     },
     {
-        itemName: "Canned Black Beans",
-        stock:"9 cans",
-        category:"canned goods",
+        name: "Canned Black Beans",
+        amount:"9 cans",
+        category:"proteins",
     },
     {
-        itemName: "Sea Salt",
-        stock:"24 ounces",
-        category:"spices & herbs",
+        name: "Sea Salt",
+        amount:"24 ounces",
+        category:"herbal",
     },
+    {
+        name: "Canned Chicken",
+        amount:"50 camns",
+        category:"chicken",
+    },
+    {
+        name: "Lemons",
+        amount:"15 pounds",
+        category:"fruits",
+    },
+    {
+        name: "Spaghetti",
+        amount:"10 pounds",
+        category:"noodle",
+    },
+    {
+        name: "Salmon",
+        amount:"5 lbs.",
+        category:"fish",
+    },
+    {
+        name: "Rye",
+        amount:"25 loaves",
+        category:"bread",
+    },
+   
 ];
