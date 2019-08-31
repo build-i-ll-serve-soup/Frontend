@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { axiosWithAuth } from '../Auth/axiosAuth';
 import CategoryTabs from './CategoryTabs';
 import ItemCards from './ItemCards';
-import ItemsCardsAxios from "./ItemsCardsAxios";
-import KitchenList from "./KitchenList"
+
 
 import { tabData, cardData } from '../../data';
 
@@ -59,9 +58,7 @@ export default class Content extends Component {
         />
         <ItemCards itemCards={this.filterCards()}
         />
-        <ItemsCardsAxios />
-        <h1>Participating Soup Kitchens :</h1>
-        <KitchenList />
+      
       </div>
     );
   }

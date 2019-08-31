@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {Form} from "formik";
+import KitchenList from "./components/Content/KitchenList";
 
 const AddKitchenForm = props => {
     
@@ -16,7 +17,8 @@ const AddKitchenForm = props => {
 
     return (
         <div className="onboard-form">
-
+           <h1>Participating Soup Kitchens :</h1>
+        <KitchenList />
             <Form className="form" onSubmit={submitKitchen}>
               <h2>Add Kitchen Form</h2>
 
