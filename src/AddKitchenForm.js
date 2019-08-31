@@ -1,66 +1,39 @@
-import React, {useState} from "react";
-import {Form} from "formik";
-import KitchenList from "./components/Content/KitchenList";
+import React  from 'react';
+import {Form, Field, withFormik} from "formik"
+// import axios from 'axios';
 
-const AddKitchenForm = props => {
-    
-    const [kitchen, setKitchen] = useState("");
+const AddKitchenForm = (props) => {
 
-    const kitchenHandler = event => {
-      setKitchen({...kitchen, [event.target.name]: event.target.value});
-    }
-
-    const submitKitchen = event => {
-        event.preventDefault()
-        props.addNewKitchen(kitchen)
-    }
-
-    return (
-        <div className="onboard-form">
-           <h1>Participating Soup Kitchens :</h1>
-        <KitchenList />
-            <Form className="form" onSubmit={submitKitchen}>
-              <h2>Add Kitchen Form</h2>
-
-              <input className="formSection" 
-                type="text"
-                name="name"
-                placeholder="Name of Kitchen"
-                value={kitchen.name}
-                onChange={kitchenHandler}
-                />
-              <input className="formSection" 
-                type="text"
-                name="location"
-                placeholder="Address"
-                value={kitchen.location}
-                onChange={kitchenHandler}
-                />
-              <input className="formSection" 
-                type="text"
-                name="mission"
-                placeholder="Mission Statement"
-                value={kitchen.mission}
-                onChange={kitchenHandler}
-                />
-              <input className="formSection" 
-                type="text"
-                name="visitors"
-                placeholder="Average # of Visitors"
-                value={kitchen.average_visitors}
-                onChange={kitchenHandler}
-                />
-              <input className="formSection" 
-                type="email"
-                name="website"
-                placeholder="Email"
-                value={kitchen.website}
-                onChange={kitchenHandler}
-                />
-                <button type="submit" className="form-button">Submit</button>
-            </Form>
-        </div>
-    )
+  return (
+    <div className="kitchen-form">
+      <h2>Add Kitchen Form</h2>
+      <Form>
+          <Field type="text" name="name" placeholder="name"/>
+          <Field type="text" name="location" placeholder="location"/>
+          <Field type="text" name="mission" placeholder="mission"/>
+          <Field type="text" name="average_visitors" placeholder="average_visitors" />
+          <Field type="text" name="website" placeholder= "website"/>
+        <button type="submit">Submit</button>
+      </Form>
+    </div>
+  );
 };
 
-export default AddKitchenForm
+const FormikKitchenForm = withFormik({
+  mapPropsToValues({name, location, mission, average_visitors, website}) {
+    return {
+        name:name || "",
+        location:location || "",
+        mission:mission || "",
+        average_visitors:average_visitors || "",
+        website:website || ""
+    }
+  },
+
+  handleSubmit(values){
+    console.log("form submit:", values)
+
+  }
+})(AddKitchenForm)
+
+export default FormikKitchenForm;
