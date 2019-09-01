@@ -27,9 +27,9 @@ const KitchenList = props => {
      };
      
      function KitchenDetails({ kitchen }) {
-        const {name,location, mission, website, average_visitors } = kitchen;
+        const { name, location, mission, website, average_visitors } = kitchen;
         return (
-            <div>
+            <div className="kitchens">
                 <h2>{name}</h2>
                 <h4>Location: {location}</h4>
                 <p>Mission Statement: {mission}</p>

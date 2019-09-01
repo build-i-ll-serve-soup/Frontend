@@ -84,8 +84,6 @@ input, textarea {
 }
 
 .nav-bar {
-  
-  
   font-weight: bold;
   padding-top: 10px;
 }
@@ -107,34 +105,42 @@ input, textarea {
   display: flex;
   flex-direction: column;
   text-align: center;
-  border: 3px dotted green;
 }
 .itemCard {
   box-shadow: 0px 0px 5px 5px #ccc;
   background-color: white;
   border-radius: 5px;
-  /* border: 4px solid orange; */
   margin: 25px 150px;
 }
-/* .itemCards-container {
-  border: 5px solid maroon;
-} */
 
-/* .itemName {
-  border: 2px dashed purple;
-  color: purple;
-} */
 .stock, .category {
-
   color:#7cb342;
 }
-.kitchen-list {
-  border: 2px solid gray;
+
+.kitchens {
+  border: 3px solid #7cb342;
+  border-radius: 15px;
+  padding: 10px;
+  margin:15px 0;
 }
-/* .kitchen-form, .item-form {
-    width: 460px;
-    margin: auto 100px;
-    padding: 32px;
-    background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-} */
+.form-title {
+  margin-left: 175px;
+  color:#468008;
+}
+h2 {
+  color:#6bc50a;
+}
+.tab {
+  border:1px solid black;
+  width: 80px;
+}
+.tab :hover {
+  text-decoration: underline;
+  background: #910000;
+  color:#FFFFFF;
+}
+.tab :active {
+  background: #910000;
+    color:#7cb342;
+}
+

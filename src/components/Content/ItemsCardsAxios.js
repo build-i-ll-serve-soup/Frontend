@@ -22,7 +22,7 @@ const ItemsCardsAxios = props =>{
     
     return (
         <div className="axiosCards">
-             <h1>Item Details from axios</h1>
+             {/* <h1>Item Details from axios</h1> */}
             {items.map(item=> (
        <ItemsDetails key={item.id} item={item} />
      ))}
@@ -30,11 +30,11 @@ const ItemsCardsAxios = props =>{
     )
 }
 function ItemsDetails({item}) {
-  const {name,quantity, category } = item; 
+  const {name,amount, category } = item; 
   return (
       <div>
           <h2>{name}</h2>
-          <h3>{quantity}</h3>
+          <h3>{amount}</h3>
           <p>{category}</p>
       </div>
   )

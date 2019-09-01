@@ -31,7 +31,7 @@ export default function Nav(props) {
   return (
     <div className={classes.root}>
       {props.login ? (
-        <AppBar position="static" color="white">
+        <AppBar position="static" color="inherit">
           <Toolbar>
             <Typography variant="h5" className={classes.title} style={{textAlign: 'left', paddingLeft: '5rem'}}>
               I'll Serve Soup
@@ -40,7 +40,7 @@ export default function Nav(props) {
               <Button>Inventory</Button>
             </Link>
             <Link default to="/addKitchen">
-              <Button>Add Kitchen</Button>
+              <Button>Kitchens</Button>
             </Link>
             <Link default to="/addItem">
               <Button>Add Item</Button>
@@ -51,7 +51,7 @@ export default function Nav(props) {
           </Toolbar>
         </AppBar>
       ) : (
-        <AppBar position="static" color="white">
+        <AppBar position="static" color="inherit">
           <Toolbar>
             <Typography variant="h5" className={classes.title}>
               I'll Serve Soup

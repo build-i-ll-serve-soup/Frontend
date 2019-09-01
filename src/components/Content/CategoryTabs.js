@@ -8,12 +8,14 @@ const CategoryTabs = props => {
       <div className="categories">
 
       {props.categoryTabs.map((categoryTab,index) =>(
+        <div className="tab">
         <CategoryTab 
         categoryTab={categoryTab}
         index={index}
         selectTabHandler={props.selectTabHandler}
         selectedTab={props.selectedTab}
         />
+        </div>
       ))}
       </div>
    

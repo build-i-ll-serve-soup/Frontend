@@ -8,15 +8,15 @@ const AddKitchenForm = ({errors,touched}) => {
 
   return (
     <div className="onboard-form">
-      <h2>Participating Kitchens</h2>
+      <h2 className="form-title">Soup Kitchen Partners:</h2>
       <KitchenList />
-      <h2>Add Kitchen Form</h2>
+      <h2 className="form-title">Add Kitchen Form</h2>
       <Form>
           <Field type="text" name="name" placeholder="name"/>
             {touched.name && errors.name &&
             <p className="error">{errors.name}</p>}
 
-           <Field type="text" name="location" placeholder=""/>
+           <Field type="text" name="location" placeholder="location"/>
             {touched.location && errors.location &&
             <p className="error">{errors.location}</p>}
         

@@ -3,7 +3,7 @@ import React from 'react';
 const CategoryTab = props => {
 
       let tabCategory = "";
-    //   console.log(props)
+      console.log(props)
       if(props.categoryTab === props.selectedTab) {
         tabCategory = "tab active-tab"
       } else {
@@ -15,7 +15,6 @@ const CategoryTab = props => {
     <div
       className = {tabCategory}
       onClick = {() => {
-
         props.selectTabHandler(props.categoryTab)
       }}
     >

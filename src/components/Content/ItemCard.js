@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ItemCard = props => {
-  console.log(props)
+  // console.log(props)
   return (
     <div className="itemCard" >
       <div className="itemName"><strong><h2>{props.itemCard.name}</h2></strong></div>

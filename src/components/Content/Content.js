@@ -4,6 +4,7 @@ import CategoryTabs from './CategoryTabs';
 import ItemCards from './ItemCards';
 
 
+
 import { tabData, cardData } from '../../data';
 
 export default class Content extends Component {
@@ -57,8 +58,7 @@ export default class Content extends Component {
             selectTabHandler={this.changeSelected}
         />
         <ItemCards itemCards={this.filterCards()}
-        />
-      
+       />
       </div>
     );
   }
