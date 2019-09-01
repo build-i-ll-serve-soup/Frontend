@@ -10,7 +10,7 @@ const Signup = ({ values, status }) => {
   return (
     <div className="onboard-form">
       <div className="form-header">
-        <h1>Join</h1>
+        <h1>Signup</h1>
       </div>
 
       <Form className="form">

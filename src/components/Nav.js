@@ -57,11 +57,11 @@ export default function Nav(props) {
               I'll Serve Soup
             </Typography>
             <Link default to="/login">
-              <Button>Sign In</Button>
+              <Button>Login</Button>
             </Link>
             <Link to="/signup">
               <Button variant="outlined" className={classes.getStarted}>
-                Get Started
+                Signup
               </Button>
             </Link>
           </Toolbar>
