@@ -1,59 +1,59 @@
-export const tabData = ["ALL", "CHICKEN", "FRUITS", "HERBAL", "PROTEINS", "CREAM", "INSTANT", "NOODLE", "FISH", "BREAD", "BISQUE"]
+export const tabData = ["all", "chicken", "fruit", "herbal", "proteins", "cream", "instant", "noodle", "fish","bread", "Bisque"]
 export const cardData = [
     {
         name: "Paper Towels",
         amount:"50 rolls",
-        category:"BISQUE",
+        category:"Bisque",
     },
     {
         name: "Butter(unsalted)",
         amount:"15 pounds",
-        category:"CREAM",
+        category:"cream",
     },
     {
         name: "White Potatoes",
         amount:"10 pounds",
-        category:"FRUIT",
+        category:"fruit",
     },
     {
         name: "Flour",
         amount:"18 pounds",
-        category:"INSTANT",
+        category:"instant",
     },
     {
         name: "Canned Black Beans",
         amount:"9 cans",
-        category:"PROTEINS",
+        category:"proteins",
     },
     {
         name: "Sea Salt",
         amount:"24 ounces",
-        category:"HERBAL",
+        category:"herbal",
     },
     {
-        name: "Canned Chicken",
+        name: "Canned chicken",
         amount:"50 camns",
-        category:"CHICKEN",
+        category:"chicken",
     },
     {
         name: "Lemons",
         amount:"15 pounds",
-        category:"FRUITS",
+        category:"fruits",
     },
     {
         name: "Spaghetti",
         amount:"10 pounds",
-        category:"NOODLE",
+        category:"noodle",
     },
     {
         name: "Salmon",
         amount:"5 lbs.",
-        category:"FISH",
+        category:"fish",
     },
     {
         name: "Rye",
         amount:"25 loaves",
-        category:"BREAD",
+        category:"bread",
     },
    
 ];
